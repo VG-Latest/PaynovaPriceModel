@@ -80,7 +80,7 @@ public class SystemServiceImpl implements SystemServiceIface {
 			return new ApiResponse<>(true, "OK", services);
 
 		} catch (Exception e) {
-			e.printStackTrace();
+			
 			log.info("Error while fetching system services. projectId={}", projectId, e);
 			return new ApiResponse<>(false, "Something went wrong. Please try after sometime", null);
 		}
@@ -148,7 +148,7 @@ public class SystemServiceImpl implements SystemServiceIface {
 			return new ApiResponse<>(true, "Custom rate card found", dtos);
 
 		} catch (Exception e) {
-			e.printStackTrace();
+			
 			log.info("Error while fetching custom rate card. serviceId={}, stakeholderId={}", serviceId, stakeholderId,
 					e);
 			return new ApiResponse<>(false, "Something went wrong. Please try again later", null);
@@ -179,7 +179,7 @@ public class SystemServiceImpl implements SystemServiceIface {
 			return new ApiResponse<>(false, "No generic rate card found for serviceId: " + serviceId, null);
 
 		} catch (Exception e) {
-			e.printStackTrace();
+		
 			log.info("Error while fetching generic rate card. serviceId={}", serviceId, e);
 			return new ApiResponse<>(false, "Something went wrong. Please try again later", null);
 		}

@@ -83,12 +83,12 @@ public class CustomPricingImpl implements CustomPricingIface {
 		} catch (IllegalArgumentException e) {
 			log.warn("Business validation failed while creating custom pricing. reason={}", e.getMessage());
 			// throw e;
-			e.printStackTrace();
+		
 			return new ApiResponse<>(false, "something went wrong. please try after sometime", null);
 		} catch (Exception e) {
 			log.error("Unexpected error while creating custom pricing. serviceId={}", request.getServiceId(), e);
 			// throw e;
-			e.printStackTrace();
+		
 			return new ApiResponse<>(false, "something went wrong. please try after sometime", null);
 		}
 	}
@@ -120,12 +120,12 @@ public class CustomPricingImpl implements CustomPricingIface {
 		} catch (IllegalArgumentException e) {
 			log.warn("Update failed for custom pricing. id={}, reason={}", id, e.getMessage());
 			// throw e;
-			e.printStackTrace();
+			
 			return new ApiResponse<>(false, "something went wrong. please try after sometime", null);
 		} catch (Exception e) {
 			log.error("Unexpected error while updating custom pricing. id={}", id, e);
 			// throw e;
-			e.printStackTrace();
+	
 			return new ApiResponse<>(false, "something went wrong. please try after sometime", null);
 		}
 	}
@@ -154,7 +154,7 @@ public class CustomPricingImpl implements CustomPricingIface {
 		} catch (IllegalArgumentException e) {
 			log.warn("Deactivation failed. id={}, reason={}", id, e.getMessage());
 			// throw e;
-			e.printStackTrace();
+			
 			return new ApiResponse<>(false, "something went wrong. please try after sometime", null);
 		} catch (Exception e) {
 
