@@ -157,7 +157,7 @@ public class CustomPricingImpl implements CustomPricingIface {
 			e.printStackTrace();
 			return new ApiResponse<>(false, "something went wrong. please try after sometime", null);
 		} catch (Exception e) {
-			e.printStackTrace();
+
 			log.error("Unexpected error while deactivating custom pricing. id={}", id, e);
 			return new ApiResponse<>(false, "something went wrong. please try after sometime", null);
 

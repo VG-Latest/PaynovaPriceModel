@@ -246,7 +246,7 @@ public class SystemServiceImpl implements SystemServiceIface {
 			}
 			return new ApiResponse<>(true, "Success", cardCustomPricings);
 		} catch (Exception e) {
-			e.printStackTrace();
+
 			return new ApiResponse<>(false, "Something went wrong. Please try after sometime",null);
 		}
 	}
