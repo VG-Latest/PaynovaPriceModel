@@ -194,7 +194,7 @@ public class CustomPricingImpl implements CustomPricingIface {
 			e.printStackTrace();
 			return new ApiResponse<>(false, "something went wrong. please try after sometime", null);
 		} catch (Exception e) {
-			e.printStackTrace();
+			
 			return new ApiResponse<>(false, "something went wrong. please try after sometime", null);
 		}
 	}
