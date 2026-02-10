@@ -76,7 +76,7 @@ public class DashBoardImpl implements DashBoardIface {
 			return new ApiResponse<>(true, "Rate card dashboard data", dashboardList);
 
 		} catch (Exception e) {
-			e.printStackTrace();
+			
 			log.info("Error while fetching dashboard rate cards", e);
 			return new ApiResponse<>(true, "Something went wrong. please try after sometime", null);
 		}
