@@ -191,7 +191,7 @@ public class CustomPricingImpl implements CustomPricingIface {
 			return new ApiResponse<>(true, "Custom pricing activated successfully", pricing.get());
 
 		} catch (IllegalArgumentException e) {
-			e.printStackTrace();
+		
 			return new ApiResponse<>(false, "something went wrong. please try after sometime", null);
 		} catch (Exception e) {
 			
