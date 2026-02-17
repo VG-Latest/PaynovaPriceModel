@@ -27,7 +27,7 @@ public class WalletCustomerImpl implements WalletCustomerIface{
 			List<CustomerEnrollment> customerEnrollment = customerEnrollmentRepository.findAll();
 			return new ApiResponse<>(true,"Success",customerEnrollment);
 		} catch (Exception e) {
-		
+		log.error("Unexpected exception", e);
 			return new ApiResponse<>(false, "Something went wrong. please try after sometime", null);
 		}
 	}
