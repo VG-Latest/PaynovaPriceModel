@@ -53,7 +53,7 @@ public class WalletCustomerImpl implements WalletCustomerIface{
 			}
 			return new ApiResponse<>(true, "Success", list);
 		} catch (Exception e) {
-			// Exception caught and handled
+			log.error("Unexpected exception", e);
 			return new ApiResponse<>(false, "Something went wrong. please try after sometime", null);
 		}
 	}
