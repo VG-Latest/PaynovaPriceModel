@@ -38,6 +38,7 @@ public class WalletCustomerImpl implements WalletCustomerIface{
 			List<PaymentHistory> list =historyRepo.findPaymentHistorySuccessAndFailed();
 			return new ApiResponse<>(true,"Success",list);
 		} catch (Exception e) {
+         log.error("Unexpected exception", e);
 
 			return new ApiResponse<>(false, "Something went wrong. please try after sometime", null);
 		}
